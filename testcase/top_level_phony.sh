@@ -39,5 +39,5 @@ if echo "${mk}" | grep -qv "kati"; then
   # Make doesn't support these warnings, so write the expected output.
   echo 'Makefile:4: *** real file "out/foo" depends on PHONY target "bar"'
 else
-  ${mk} --werror_real_to_phony --top_level_phony 2>&1
+  ${mk} --warn_real_to_phony --top_level_phony 2>&1
 fi
